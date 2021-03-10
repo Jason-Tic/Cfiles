@@ -70,3 +70,32 @@ Polynomial Add(Polynomial P1, Polynomial P2)
     t = P; P->link = P; free(t);
     return P;
 }
+
+Polynomial MultOne(Polynomial PNode, Polynomial P2)
+{
+	Polynomial P, t, temp, Rear;
+	t = P2;
+	P = (Polynomial)malloc(sizeof(struct PolyNode));
+	Rear = P;
+	while (t) {
+		Attach(PNode->coef*t->coef, PNode->exp + t->exp, &Rear);
+		t = t->link;
+	}
+	temp = P; P = P->link;
+	free(temp);
+	return P;
+}
+
+Polynomial Mult(Polynomial P1, Polynomial P2)
+{
+	Polynomial P1, t1, t2, temp, Rear;
+	t1 = P1; t2 = P2;
+	P = (Polynomial)malloc(sizeof(struct PolyNode));
+	Rear = P;
+	while (t1) {
+		Polynomial PTemp;
+		PTemp =  MultOne(t1, t2);
+		P = Add(P, PTemp);
+		t1 = t1->link;
+	}
+}
