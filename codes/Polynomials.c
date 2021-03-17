@@ -5,7 +5,7 @@ struct PolyNode{
     int coef;
     int exp;
     struct PolyNode *link;
-}
+};
 typedef struct PolyNode* Polynomial;
 
 void Attach(int c, int e, Polynomial* pRear)
@@ -37,7 +37,7 @@ Polynomial ReadPoly()
 Polynomial Add(Polynomial P1, Polynomial P2)
 {
     Polynomial t1,t2,P,Rear, t;
-    t1 = p1; t2 = p2;
+    t1 = P1; t2 = P2;
     P = (Polynomial)malloc(sizeof (struct PolyNode));
     Rear = P;
     while (t1&&t2)
@@ -88,7 +88,7 @@ Polynomial MultOne(Polynomial PNode, Polynomial P2)
 
 Polynomial Mult(Polynomial P1, Polynomial P2)
 {
-	Polynomial P1, t1, t2, temp, Rear;
+	Polynomial P, t1, t2, temp, Rear;
 	t1 = P1; t2 = P2;
 	P = (Polynomial)malloc(sizeof(struct PolyNode));
 	Rear = P;

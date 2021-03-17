@@ -5,7 +5,11 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "c:/mingw/bin/../lib/gcc/mingw32/8.2.0/include/c++",
-                ""
+                "c:/mingw/bin/../lib/gcc/mingw32/8.2.0/include/c++/mingw32",
+                "c:/mingw/bin/../lib/gcc/mingw32/8.2.0/include/c++/backward",
+                "c:/mingw/bin/../lib/gcc/mingw32/8.2.0/include",
+                "c:/mingw/bin/../lib/gcc/mingw32/8.2.0/../../../../include",
+                "c:/mingw/bin/../lib/gcc/mingw32/8.2.0/include-fixed"
             ],
             "defines": [
                 "_DEBUG",
