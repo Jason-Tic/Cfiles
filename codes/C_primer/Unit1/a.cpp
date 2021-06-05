@@ -22,6 +22,6 @@ int main()
     // std::cout<<"*/";
     // std::cout<</* "*/" /* "/*" */;
     // std::cout<</* "*/" */ ";
-    // test01();
-
+    test01();
+    return 0;
 }
